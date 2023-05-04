@@ -1,25 +1,13 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import { ReactNode, useState } from "react";
+import { ShoppingCartContext } from "./SCContext";
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
 };
 
-type ShoppingCartContext = {
-  getItemQuantity: (id: number) => number;
-  increaseCartQuantity: (id: number) => void;
-  decreaseCartQuantity: (id: number) => void;
-  removeFromCart: (id: number) => void;
-};
-
 type CartItem = {
   id: number;
   quantity: number;
-};
-
-const ShoppingCartContext = createContext({} as ShoppingCartContext);
-
-export const useShoppingCart = () => {
-  return useContext(ShoppingCartContext);
 };
 
 export const ShoppingCartProvider = ({
