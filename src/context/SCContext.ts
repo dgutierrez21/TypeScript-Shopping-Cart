@@ -8,6 +8,7 @@ export type CartItem = {
 type ShoppingCartContext = {
   openCart: () => void;
   closeCart: () => void;
+  isOpen: boolean;
   cartQuantity: number;
   cartItems: CartItem[];
   getItemQuantity: (id: number) => number;
