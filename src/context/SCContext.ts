@@ -1,6 +1,15 @@
 import { createContext, useContext } from "react";
 
+export type CartItem = {
+  id: number;
+  quantity: number;
+};
+
 type ShoppingCartContext = {
+  openCart: () => void;
+  closeCart: () => void;
+  cartQuantity: number;
+  cartItems: CartItem[];
   getItemQuantity: (id: number) => number;
   increaseCartQuantity: (id: number) => void;
   decreaseCartQuantity: (id: number) => void;
