@@ -11,7 +11,7 @@ export const ShoppingCartApp = () => {
       <ShoppingCart />
       <NavBar />
 
-      <Container className="mb-4">
+      <Container className="mb-4 mx-auto">
         <Outlet />
       </Container>
     </ShoppingCartProvider>

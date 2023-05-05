@@ -7,13 +7,12 @@ export const Store = () => {
     <>
       <h1>Store</h1>
 
-      <Row md={2} xs={1} lg={3} className="gap-3">
+      <Row xs={1} sm={2} lg={3} className="row-gap-4">
         {storeItems.map((item) => (
           <Col key={item.id}>
             <StoreItems {...item} />
           </Col>
         ))}
-        <Col></Col>
       </Row>
     </>
   );
